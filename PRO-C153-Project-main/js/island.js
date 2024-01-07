@@ -5,13 +5,13 @@ AFRAME.registerComponent("island-rotation", {
   init: function () {
     window.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") {
-        if (this.data.speedOfRotation > 0.1) {
-          this.data.speedOfRotation -= 0.01;
+        if (this.data.speedOfRotation > 5) {
+          this.data.speedOfRotation -= 3;
         }
       }
       if (e.key === "ArrowLeft") {
-        if (this.data.speedOfRotation < -0.1) {
-          this.data.speedOfRotation += 0.01;
+        if (this.data.speedOfRotation < -5) {
+          this.data.speedOfRotation += 3;
         }
       }
     });
@@ -19,6 +19,7 @@ AFRAME.registerComponent("island-rotation", {
   tick: function () {
     var mapRotation = this.el.getAttribute("rotation");
 
+    mapRotation.z += this.data.speedOfRotation;
     mapRotation.y += this.data.speedOfRotation;
 
     this.el.setAttribute("rotation", {

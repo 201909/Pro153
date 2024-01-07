@@ -1,4 +1,4 @@
-AFRAME.registerComponent("fish",{
+/*AFRAME.registerComponent("fish",{
     init:function(){
         for(var i = 1; i <= 20; i++){
             const id = `fish${i}`
@@ -24,4 +24,4 @@ AFRAME.registerComponent("fish",{
         obstacleEntity.appendChild(fishEl);
 
     }
-})
+})*/

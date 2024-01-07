@@ -9,6 +9,7 @@
     <script src="./js/island.js"></script>
     <script src="./js/Coin.js"></script>
     <script src="./js/Fish.js"></script>
+    <script src="./js/Game.js"></script>
 
 
   </head>
@@ -26,7 +27,7 @@
           id="coral_fish"
           src="assets/fish/scene.gltf"
         ></a-asset-item>
-        <a-asset-item id="turtle" src="assets/turtle/scene.gltf"></a-asset-item>        
+        <!--a-asset-item id="turtle" src="assets/turtle/scene.gltf"></a-asset-item-->        
         <a-asset-item
           id="scuba_driver"
           src="assets/scuba_driver/scene.gltf"
@@ -40,7 +41,7 @@
         radius="100"
         theta-length="180"
         side="double"
-        animation="property: position; to: 0 0 1000;easing:linear; loop: true; dur: 100000"
+        animation="property: position; to: 0 0 1000;easing:; loop: true; dur: 200000"
         coins
         fish
       >
@@ -52,7 +53,7 @@
           scale="1 1 1"
           position="0 -15 -40"
           island-rotation
-          
+
         ></a-entity>
 
         <!--Trasures-->
@@ -109,7 +110,11 @@
           color="#b2ebf2"
           animation="property: position; to: 52.9829 300 -49.38121;easing:linear; loop: true; dur: 2000"
         ></a-sphere>
-      </a-entity>
+    </a-entity>
+
+    <a-entity>
+      <a-circle color = "yellow" radius = "1"></a-circle>
+    </a-entity circle>
 
       <a-cylinder color="#00009e" radius="100" opacity="0.2"></a-cylinder>
 
